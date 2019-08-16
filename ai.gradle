@@ -1,0 +1,90 @@
+ext {
+    isSetApplication = false  //设置模块开关，false:作为Lib组件存在， true:作为application存在
+    isCoreApplication = false  //核心推药模块开关，false:作为Lib组件存在， true:作为application存在
+
+
+    android = [
+            compileSdkVersion: 29,
+            buildToolsVersion: "29.0.1",
+            minSdkVersion    : 19,
+            targetSdkVersion : 28,
+            versionCode      : 50,
+            versionName      : "1"
+    ]
+
+    version = [
+            //support
+            androidSupportSdkVersion: "1.0.2",
+            constraintlayout        : "1.1.3",
+            annotation              : "1.1.0",
+
+            //router
+            arouter                 : "1.5.0",
+            routercompiler          : "1.2.2",
+
+            //util
+            utilcode                : "1.25.6",
+
+            //network
+            retrofitSdkVersion      : "2.6.1",
+            okhttp                  : "3.8.1",
+            okdownload              : "1.0.5",
+
+            //rx
+            rxJava                  : "2.2.11",
+            rxAndroid               : "2.1.1",
+            rxlifecycle             : "3.0.0",
+
+
+
+
+            //glide
+            glideSdkVersion         : "4.8.0",
+            glideTransformations    : "4.0.1"
+
+
+    ]
+
+    dependencies = [
+            //support
+            "appcompat"               : "androidx.appcompat:appcompat:${version["androidSupportSdkVersion"]}",
+            "constraintlayout"        : "androidx.constraintlayout:constraintlayout:${version["constraintlayout"]}",
+            "annotation"        : "androidx.annotation:annotation:${version["annotation"]}",
+
+            //router
+            "router"                  : "com.alibaba:arouter-api:${version["arouter"]}",
+            "router-compiler"         : "com.alibaba:arouter-compiler:${version["routercompiler"]}",
+
+            //util
+            "utilcode"                : "com.blankj:utilcodex:${version["utilcode"]}",
+
+            //network
+            "retrofit"                : "com.squareup.retrofit2:retrofit:${version["retrofitSdkVersion"]}",
+            "retrofit-converter-gson" : "com.squareup.retrofit2:converter-gson:${version["retrofitSdkVersion"]}",
+            "retrofit-adapter-rxjava2": "com.squareup.retrofit2:adapter-rxjava2:${version["retrofitSdkVersion"]}",
+            "okhttp"                  : "com.squareup.okhttp3:okhttp:${version["okhttp"]}",
+            "logging-interceptor"     : "com.squareup.okhttp3:logging-interceptor:${version["okhttp"]}",
+            "okdownload"              : "com.liulishuo.okdownload:okdownload:${version["okdownload"]}",
+
+            //Rx
+            "rxjava2"                 : "io.reactivex.rxjava2:rxjava:${version["rxJava"]}",
+            "rxandroid2"              : "io.reactivex.rxjava2:rxandroid:${version["rxAndroid"]}",
+            "rxlifecycle"             : "com.trello.rxlifecycle3:rxlifecycle-components:${version["rxlifecycle"]}",
+
+
+            //view
+            "waveloadingview"         : "me.itangqi.waveloadingview:library:0.3.5",
+            "flexbox"                 : "com.google.android:flexbox:1.0.0",
+            "switchbutton"            : "com.kyleduo.switchbutton:library:2.0.0",
+
+            //list
+            "listadapter"             : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47-androidx",
+
+            //image
+            "glide"                   : "com.github.bumptech.glide:glide:${version["glideSdkVersion"]}",
+            "glide-compiler"          : "com.github.bumptech.glide:compiler:${version["glideSdkVersion"]}",
+            "glide-transformations"   : "jp.wasabeef:glide-transformations:${version["glideTransformations"]}"
+
+
+    ]
+}
